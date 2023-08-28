@@ -108,7 +108,7 @@ body{
 
 /* ================================== Start Navbar ==================================--> */
 .navbar{
-    /* display: none; */
+    display: none;
     transition: 3s;
     background-color: transparent !important;
   }

@@ -27,12 +27,24 @@ body{
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px;
 }
+.our-team::before,.our-message::before,.our-mission::before,.our-goal::before,.rate-us::before{
+  content: "";
+  width: 100%;
+  height:calc(100% + 1px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #080808 100%);
+  /* z-index: 9999; */
+}
 .our-team,.our-message,.our-mission,.our-goal,.rate-us{
   width: 100%;
   height: 385px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
 }
 @media (max-width:576px) {
   .section-title{
@@ -320,7 +332,7 @@ position: relative;
 
   /* ================================== Start Our message ================================== */
   .our-message{
-    background-image: url(../images/message.svg);
+    background-image: url(../images/sky-34536_1280.png);
     background-position: center center;
   }
   /* ================================== End Our message ================================== */
@@ -334,39 +346,19 @@ position: relative;
 
   /*  ================================== Start Our goal ==================================- */
 .our-goal{
-  background-image: url(../images/goal_prev_ui.png);
-  background-position: center left;
-  background-size: contain;
+  background-image: url(../images/entrepreneur-1340649_1280.jpg);
+  background-position: center bottom;
+  background-size: cover;
+
 }
-.our-goal::before{
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  background-color: #202626;
-  z-index: -9999;
-}
+
 
   /*  ================================== End Our goal ==================================- */
 
   .rate-us{
-    background-image: url(../images/rate-removebg-preview.png);
+    background-image: url(../images/charts.webp);
     background-position: center center;
-    background-size: contain;
-  }
-  .rate-us::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #1a1a1a;
-    z-index: -9999;
+    background-size: cover;
   }
 /* ================================== Start Rate us ================================== */
 /* CARD COMPONENT */

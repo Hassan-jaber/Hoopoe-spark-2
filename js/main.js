@@ -8,7 +8,7 @@ window.addEventListener(("load"), _ =>{
         preloader.style.display="none"
         navbar.style.display="block"
         body.style.overflow="visible"
-    }, 2500);
+    }, 3500);
 })
 
 

@@ -3,12 +3,13 @@
 let preloader = document.getElementById("preloader")
 let navbar = document.querySelector(".navbar")
 let body = document.querySelector("body")
+let slider_container = document.querySelector(".slider-container")
 window.addEventListener(("load"), _ =>{
     setTimeout(() => {
         preloader.style.display="none"
         navbar.style.display="block"
-        body.style.overflow="visible"
-    }, 3500);
+        slider_container.style.display="flex"
+    }, 5000);
 })
 
 
@@ -67,4 +68,22 @@ counters.forEach((counter) => {
   };
 
   animate();
+});
+
+// -----------------
+
+
+var btn = document.getElementById('button');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) {
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+});
+
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

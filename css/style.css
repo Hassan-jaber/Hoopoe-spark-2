@@ -2,7 +2,6 @@
 
 body{
   font-family: 'Cairo', sans-serif;
-  overflow-x: hidden;
   background-color: #050505;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -46,6 +45,48 @@ body{
   position: relative;
 
 }
+.our-team:hover .hidden-content,.our-message:hover .hidden-content,.our-mission:hover .hidden-content,.our-goal:hover .hidden-content,.rate-us:hover .hidden-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+.our-team:hover .hidden-content{
+  height: 330px;
+}
+.animate__animated.animate__fadeIn {
+  animation: fadeIn infinite; /* referring directly to the animation's @keyframe declaration */
+  --animate-duration: 2s;
+}
+.hidden-content{
+  display: none;
+}
+.hidden-content p{
+  color: #DDE6ED;
+  align-self: flex-end;
+  align-content: flex-end;
+  text-align: center;
+
+}
+@media (max-width:992px) {
+  .our-team:hover .hidden-content{
+    height: 350px;
+  }
+}
+/* @media (min-width:768px) {
+  .our-team:hover .section-title{
+    margin-top: -10px;
+    transition: 0.1s;
+  }
+} */
+@media (max-width:768px) {
+  .our-team:hover .section-title{
+    margin-top: -50px;
+  }
+}
+
 @media (max-width:576px) {
   .section-title{
     font-size: 36px;
@@ -72,35 +113,72 @@ body{
   .perloader-logo{
     position: absolute;
     left: 0;
-    top: 60%;
+    top: 40%;
     visibility: hidden;
-    animation: perloader-logo 3s  1s ease-in-out;
-    transform-origin: bottom;
+    animation: perloader-logo 5s  1s ease-in-out;
   }
   @keyframes perloader-logo {
     0%{
     visibility: visible;
-    transform: rotate(0deg);
+
     left: -50px;
-    top: 60%;
+    top: 40%;
+    }
+    25%{
+      top: 20%;
     }
     50%{
-      transform: rotate(20deg);
       top: 40%;
     }
     75%{
-      transform: rotate(-10deg);
+      top: 20%;
     }
     100%{
-      transform: rotate(0deg);
       left: 100%;
-      top: 50%;
+      top: 40%;
     }
   }
   /* @media (max-width:576px) {
 
   } */
-/* ================================== Start preloader ================================== */
+/* ================================== End preloader ================================== */
+
+
+/*  */
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E242A;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+/* #button:active {
+  background-color: #555;
+} */
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/*  */
+
 
 /* ================================== Start Navbar ==================================--> */
 .navbar{
@@ -187,7 +265,7 @@ position: relative;
 
   /* ================================== Start Header ================================== */
   .slider-container {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -349,7 +427,6 @@ position: relative;
   background-image: url(../images/entrepreneur-1340649_1280.jpg);
   background-position: center bottom;
   background-size: cover;
-
 }
 
 
@@ -580,15 +657,17 @@ position: relative;
 .total-orders > :nth-child(2),
 .number-of-clients > :nth-child(2),
 .number-of-services > :nth-child(2) {
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 .total-orders > :nth-child(2) > p,
 .number-of-clients > :nth-child(2) > P,
 .number-of-services > :nth-child(2) > p {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 27px;
   color: #ffffff;
+  text-align: center;
+  padding-left: 5px;
 }
 .counter {
   display: flex;
